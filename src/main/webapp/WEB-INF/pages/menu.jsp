@@ -8,16 +8,20 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <!-- Butonul About actualizat cu clasa activa in mod dinamic -->
           <li class="nav-item">
             <a class="nav-link ${pageContext.request.requestURI.substring(pageContext.request.requestURI.lastIndexOf('/')) eq '/about.jsp' ? 'active' : ''}"
                aria-current="page" href="${pageContext.request.contextPath}/about.jsp">About</a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link ${pageContext.request.requestURI.substring(pageContext.request.requestURI.lastIndexOf('/')) eq '/Cars' ? 'active' : ''}"
+               href="${pageContext.request.contextPath}/Cars">Cars</a>
+          </li>
+
           <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
           <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Disabled</a></li>
         </ul>
 
-        <!-- Formularul de Search a fost inlocuit cu butonul de Login -->
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="${pageContext.request.contextPath}/Login">Login</a>
