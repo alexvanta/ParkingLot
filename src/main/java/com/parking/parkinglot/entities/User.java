@@ -3,6 +3,7 @@ package com.parking.parkinglot.entities;
 import jakarta.persistence.*;
 
 import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -15,11 +16,10 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-
+    private Long id;
 
     @OneToMany(mappedBy = "owner", orphanRemoval = true)
     private Set<Car> cars = new LinkedHashSet<>();
-    private Long id;
 
     public Set<Car> getCars() {
         return cars;

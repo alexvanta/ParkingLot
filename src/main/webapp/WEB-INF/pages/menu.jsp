@@ -18,7 +18,10 @@
                href="${pageContext.request.contextPath}/Cars">Cars</a>
           </li>
 
-          <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+<li class="nav-item">
+    <a class="nav-link ${pageContext.request.requestURI.substring(pageContext.request.requestURI.lastIndexOf('/')) eq '/Users' ? 'active' : ''}"
+       href="${pageContext.request.contextPath}/Users">Users</a>
+</li>
           <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">Disabled</a></li>
         </ul>
 
